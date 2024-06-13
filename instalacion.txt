@@ -1,0 +1,6 @@
+copiar todo lo anterior a la raíz
+abrir docker
+
+comandos:
+-docker-compose build
+-docker-compose up -d
