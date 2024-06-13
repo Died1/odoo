@@ -1,0 +1,4 @@
+<record id="group_music_school_teacher" model="res.groups">
+    <field name="name">Profesor</field>
+    <field name="category_id" ref="module_category_music_school"/>
+</record>
