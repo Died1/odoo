@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_academica_curso_user,access.academica.curso.user,model_academica_curso,base.group_user,1,1,1,1
-access_academica_estudiante_user,access.academica.estudiante.user,model_academica_estudiante,base.group_user,1,1,1,1
-access_academica_materia_user,access.academica.materia.user,model_academica_materia,base.group_user,1,1,1,1
-access_academica_paralelo_user,access.academica.paralelo.user,model_academica_paralelo,base.group_user,1,1,1,1
-
-
-
