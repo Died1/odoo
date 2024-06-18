@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <!-- Vista Árbol para Detalle de Asistencia -->
+        <record id="view_detalle_asistencia_tree" model="ir.ui.view">
+            <field name="name">detalle.asistencia.tree</field>
+            <field name="model">academica.detalle.asistencia</field>
+            <field name="arch" type="xml">
+                <tree string="Detalle de Asistencia">
+                    <field name="asistencia_id"/>
+                    <field name="estudiante_id"/>
+                    <field name="estado"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Formulario para Detalle de Asistencia -->
+        <record id="view_detalle_asistencia_form" model="ir.ui.view">
+            <field name="name">detalle.asistencia.form</field>
+            <field name="model">academica.detalle.asistencia</field>
+            <field name="arch" type="xml">
+                <form string="Detalle de Asistencia">
+                    <sheet>
+                        <group>
+                            <field name="asistencia_id"/>
+                            <field name="estudiante_id"/>
+                            <field name="estado"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para Detalle de Asistencia -->
+        <record id="action_detalle_asistencia" model="ir.actions.act_window">
+            <field name="name">Detalle de Asistencia</field>
+            <field name="res_model">academica.detalle.asistencia</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+       
+    </data>
+</odoo>

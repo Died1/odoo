@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <!-- Vista Árbol para Detalle Actividad -->
+        <record id="view_detalle_actividad_tree" model="ir.ui.view">
+            <field name="name">detalle.actividad.tree</field>
+            <field name="model">academica.detalle.actividad</field>
+            <field name="arch" type="xml">
+                <tree string="Detalle Actividad">
+                    <field name="actividad_id"/>
+                    <field name="estudiante_id"/>
+                    <field name="calificacion"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Formulario para Detalle Actividad -->
+        <record id="view_detalle_actividad_form" model="ir.ui.view">
+            <field name="name">detalle.actividad.form</field>
+            <field name="model">academica.detalle.actividad</field>
+            <field name="arch" type="xml">
+                <form string="Detalle Actividad">
+                    <sheet>
+                        <group>
+                            <field name="actividad_id"/>
+                            <field name="estudiante_id"/>
+                            <field name="calificacion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para Detalle Actividad -->
+        <record id="action_detalle_actividad" model="ir.actions.act_window">
+            <field name="name">Detalle Actividad</field>
+            <field name="res_model">academica.detalle.actividad</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

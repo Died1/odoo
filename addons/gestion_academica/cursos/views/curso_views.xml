@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <!-- Action for Curso Aula -->
+    <record model="ir.actions.act_window" id="academica_curso_action">
+        <field name="name">Cursos</field>
+        <field name="res_model">academica.curso</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Vista de formulario para Curso -->
+    <record id="view_curso_form" model="ir.ui.view">
+        <field name="name">academica.curso.form</field>
+        <field name="model">academica.curso</field>
+        <field name="arch" type="xml">
+            <form string="Curso">
+                <sheet>
+                    <group>
+                        <field name="cod"/>
+                        <field name="descripcion"/>
+                        <field name="nivel_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Paralelos">
+                            <field name="paralelo_ids">
+                                <tree string="Paralelos" editable="bottom">
+
+                                </tree>
+                            </field>
+                        </page>                        
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>  
+    <record id="view_curso_aula_tree" model="ir.ui.view">
+        <field name="name">academica.curso.tree</field>
+        <field name="model">academica.curso</field>
+        <field name="arch" type="xml">
+            <tree string="Cursos"> <!-- Etiqueta opcional para la vista de lista -->
+                <field name="cod"/>
+                <field name="descripcion"/>
+                <field name="nivel_nombre"/>
+            </tree>
+        </field>
+    </record>
+    
+</odoo>

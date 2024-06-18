@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Acción para Asistencia -->
+    <record model="ir.actions.act_window" id="academica_asistencia_action">
+        <field name="name">Asistencia</field>
+        <field name="res_model">academica.asistencia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- Vista de árbol para Asistencia -->
+    <record id="view_asistencia_tree" model="ir.ui.view">
+        <field name="name">academica.asistencia.tree</field>
+        <field name="model">academica.asistencia</field>
+        <field name="arch" type="xml">
+            <tree string="Asistencia">                
+                <field name="asignatura_id"/>
+                <field name="fecha"/>                
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para Asistencia -->
+    <record id="view_asistencia_form" model="ir.ui.view">
+        <field name="name">academica.asistencia.form</field>
+        <field name="model">academica.asistencia</field>
+        <field name="arch" type="xml">
+            <form string="Asistencia">
+                <sheet>
+                    <group>                        
+                        <field name="asignatura_id"/>
+                        <field name="fecha"/>
+                        <field name="detalle_ids"/>
+
+                    </group>                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

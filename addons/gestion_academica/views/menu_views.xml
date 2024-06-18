@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+        <menuitem id="music_school_institute_menu_root"
+            name="Gestion académica" sequence="10"
+            action="academica_curso_action"
+        />
+    </data>
+    <!-- Menú padre "Cursos" -->
+    <menuitem
+        id="academica_curso_menu_root"
+        name="Cursos"
+        parent="music_school_institute_menu_root"
+        sequence="10" />
+
+     <!-- Submenú "Paralelos" bajo "Cursos" -->
+     <menuitem
+     id="academica_paralelo_menu"
+     name="Paralelos"
+     parent="academica_curso_menu_root"
+     action="academica_paralelo_action"
+     sequence="10" />
+
+    <!-- Submenú "Cursos" bajo "Cursos" -->
+    <menuitem
+        id="academica_curso_menu"
+        name="Cursos"
+        parent="academica_curso_menu_root"
+        action="academica_curso_action"
+        sequence="20" />
+
+
+   
+
+    <!-- Submenú "Paralelos" bajo "Cursos" -->
+    <menuitem
+        id="academica_nivel_menu"
+        name="Niveles"
+        parent="academica_curso_menu_root"
+        action="academica_nivel_action"
+        sequence="30" />
+
+    <!-- <menuitem
+        id="academica_horario_menu"
+        name="Horarios"
+        parent="academica_curso_menu_root"
+        action="academica_horario_action"
+        sequence="30" /> -->
+
+    <menuitem
+        id="academica_materia_menu"
+        name="Materias"
+        parent="academica_curso_menu_root"
+        action="academica_materia_action"
+        sequence="40" />
+
+
+    <!-- Menú padre "Profesores y materias" -->
+    <menuitem
+        id="academica_profesor_menu_root"
+        name="Profesores"
+        parent="music_school_institute_menu_root"
+        sequence="10" />
+    <menuitem
+        id="class_type_menu_create_teacher"
+        name="Profesores"
+        action="hr_employee_action_teacher_creation"
+        sequence="2"
+        parent="academica_profesor_menu_root" />
+
+
+    <menuitem
+        id="academica_asignatura_menu"
+        name="Asignaturas"
+        parent="academica_profesor_menu_root"
+        action="academica_asignatura_action"
+        sequence="30" />
+
+    <!-- Menu item for estudiante Aula -->
+    <menuitem
+        id="academica_estudiante_menu_root"
+        name="Estudiantes"
+        sequence="10"
+        parent="music_school_institute_menu_root" />
+    <menuitem
+        id="academica_inscripcion_menu"
+        name="Inscripciones"
+        action="academica_inscripcion_action"
+        parent="academica_estudiante_menu_root" />
+    <menuitem
+        id="academica_estudiante_menu"
+        name="Estudiantes"
+        action="academica_estudiante_action"
+        parent="academica_estudiante_menu_root" />
+    <menuitem
+        id="academica_tutor_menu"
+        name="Tutores"
+        action="res_partner_action_tutor"
+        parent="academica_estudiante_menu_root" />
+</odoo>

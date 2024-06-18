@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="materia_comunicacion" model="academica.materia">
+            <field name="cod">COM001</field>
+            <field name="descripcion">Comunicación y Lenguajes (Lengua Originaria, Lengua
+                Extranjera)</field>
+        </record>
+        <record id="materia_ciencias_sociales" model="academica.materia">
+            <field name="cod">SOC001</field>
+            <field name="descripcion">Ciencias Sociales</field>
+        </record>
+        <record id="materia_artes_plasticas" model="academica.materia">
+            <field name="cod">ART001</field>
+            <field name="descripcion">Artes Plásticas y Visuales</field>
+        </record>
+        <record id="materia_educacion_fisica" model="academica.materia">
+            <field name="cod">EDF001</field>
+            <field name="descripcion">Educación Física y Deportes</field>
+        </record>
+        <record id="materia_educacion_musical" model="academica.materia">
+            <field name="cod">MUS001</field>
+            <field name="descripcion">Educación Musical</field>
+        </record>
+        <record id="materia_matematicas" model="academica.materia">
+            <field name="cod">MAT001</field>
+            <field name="descripcion">Matemáticas</field>
+        </record>
+        <record id="materia_tecnica_tecnologica" model="academica.materia">
+            <field name="cod">TEC001</field>
+            <field name="descripcion">Técnica Tecnológica</field>
+        </record>
+        <record id="materia_ciencias_naturales" model="academica.materia">
+            <field name="cod">NAT001</field>
+            <field name="descripcion">Ciencias Naturales</field>
+        </record>
+        <record id="materia_valores_espiritualidad" model="academica.materia">
+            <field name="cod">VAL001</field>
+            <field name="descripcion">Valores, Espiritualidad y Religiones</field>
+        </record>
+        <record id="materia_biologia_geografia" model="academica.materia">
+            <field name="cod">BIO001</field>
+            <field name="descripcion">Biología - Geografía</field>
+        </record>
+        <record id="materia_fisica" model="academica.materia">
+            <field name="cod">FIS001</field>
+            <field name="descripcion">Física</field>
+        </record>
+        <record id="materia_quimica" model="academica.materia">
+            <field name="cod">QUI001</field>
+            <field name="descripcion">Química</field>
+        </record>
+        <record id="materia_lengua_extrangera" model="academica.materia">
+            <field name="cod">IDI001</field>
+            <field name="descripcion">Lengua extrangera</field>
+        </record>
+        <record id="materia_lengua_originaria" model="academica.materia">
+            <field name="cod">IDI002</field>
+            <field name="descripcion">Lengua originaria</field>
+        </record>
+
+
+        <!-- Crear niveles demo con materias relacionadas -->
+        <!--         <record id="nivel_inicial" model="academica.nivel">
+            <field name="nombre">Inicial</field>
+            <field name="descripcion">Nivel educativo Inicial Prekinder y kinder. niños de 4 a 5 años</field>
+            <field name="materia_ids" eval="[(6, 0, [ref('materia_comunicacion'),
+        ref('materia_ciencias_sociales')])]"/>
+        </record> -->
+
+        <record id="nivel_primaria" model="academica.nivel">
+            <field name="nombre">Primaria</field>
+            <field name="descripcion">Nivel primario para adolescentes de 6 a 12 años.</field>
+            <field name="materia_ids"
+                eval="[(6, 0, [
+                ref('materia_comunicacion'),
+                ref('materia_ciencias_sociales'),
+                ref('materia_artes_plasticas'),
+                ref('materia_educacion_fisica'),
+                ref('materia_educacion_musical'),
+                ref('materia_matematicas'),
+                ref('materia_tecnica_tecnologica'),
+                ref('materia_ciencias_naturales'),
+                ref('materia_valores_espiritualidad'),
+            ])]" />
+        </record>
+
+        <record id="nivel_secundaria" model="academica.nivel">
+            <field name="nombre">Secundaria</field>
+            <field name="descripcion">Nivel secundario para adolescentes de 13 a 18 años.</field>
+            <field name="materia_ids"
+                eval="[(6, 0, [
+                ref('materia_comunicacion'),
+                ref('materia_ciencias_sociales'),
+                ref('materia_artes_plasticas'),
+                ref('materia_educacion_fisica'),
+                ref('materia_educacion_musical'),
+                ref('materia_matematicas'),
+                ref('materia_tecnica_tecnologica'),
+                ref('materia_ciencias_naturales'),
+                ref('materia_valores_espiritualidad'),
+                ref('materia_biologia_geografia'),
+                ref('materia_fisica'),
+                ref('materia_quimica'),
+                ref('materia_lengua_extrangera'),
+                ref('materia_lengua_originaria'),
+            ])]" />
+        </record>
+    </data>
+</odoo>

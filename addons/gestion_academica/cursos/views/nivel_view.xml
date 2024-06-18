@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Acción para Nivel -->
+    <record model="ir.actions.act_window" id="academica_nivel_action">
+        <field name="name">Niveles</field>
+        <field name="res_model">academica.nivel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista de árbol para Nivel -->
+    <record id="view_nivel_tree" model="ir.ui.view">
+        <field name="name">academica.nivel.tree</field>
+        <field name="model">academica.nivel</field>
+        <field name="arch" type="xml">
+            <tree string="Niveles">
+                <field name="nombre"/>
+                <field name="descripcion"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para Nivel -->
+    <!-- <record id="view_nivel_form" model="ir.ui.view">
+        <field name="name">academica.nivel.form</field>
+        <field name="model">academica.nivel</field>
+        <field name="arch" type="xml">
+            <form string="Nivel">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="descripcion"/>
+                    </group>
+                    <group>
+                        <field name="materia_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+</odoo>

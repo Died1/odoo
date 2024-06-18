@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Acción para Asignatura -->
+    <record model="ir.actions.act_window" id="academica_asignatura_action">
+        <field name="name">Asignatura</field>
+        <field name="res_model">academica.asignatura</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista de árbol para Horario -->
+    <record id="view_asignatura_tree" model="ir.ui.view">
+        <field name="name">academica.asignatura.tree</field>
+        <field name="model">academica.asignatura</field>
+        <field name="arch" type="xml">
+            <tree string="Asignaturas">                
+                <field name="descripcion_materia"/>
+                <field name="paralelo_id" />
+                <field name="teacher_id" />                
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para Asignatura -->
+    <record id="view_asignatura_form" model="ir.ui.view">
+        <field name="name">academica.asignatura.form</field>
+        <field name="model">academica.asignatura</field>
+        <field name="arch" type="xml">
+            <form string="asignatura">
+                <sheet>
+                    <group>
+                        <field name="paralelo_id" />
+                        <field name="materia_id" options="{'no_create_edit': True}"/>
+                        <field name="descripcion_materia" readonly="1"/>
+                        <field name="teacher_id" />                                            
+                    </group>                   
+                    <notebook>
+                        <page string="Horario">
+                            <field name="horario_ids">
+                                <tree string="Horario" editable="bottom">
+
+                                </tree>
+                            </field>
+                        </page>  
+                        <page string="Asistencia">
+                            <field name="asistencia_ids">
+                                <tree string="Asistencia" editable="bottom">
+
+                                </tree>
+                            </field>
+                        </page>  
+                        <page string="Actividades">
+                            <field name="actividad_ids">
+                                <tree string="Actividad" editable="bottom">
+
+                                </tree>
+                            </field>
+                        </page>                        
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+
+    </record>
+
+</odoo>
